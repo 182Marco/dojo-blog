@@ -52,3 +52,12 @@ button:hover {
   color: #fff;
   background-color: #198dcc;
 }
+
+.blog-preview {
+  margin: 5vh 0;
+}
+
+.author {
+  margin: 2vh 0;
+  text-align: right;
+}
