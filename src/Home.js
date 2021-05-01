@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Bloglist from './Bloglist';
+import Prova from './Prova';
 
 const Home = () => {
   const [blogs, setBlogs] = useState([
@@ -50,6 +51,7 @@ const Home = () => {
         39. sentivo mia madre… poi nulla…
         40. sul far della sera.`,
       author: 'Giovanni Pascoli',
+      id: '3908',
     },
     {
       title: 'Solo et pensoso ',
@@ -71,6 +73,7 @@ const Home = () => {
       cercar non so ch’Amor non venga sempre
       ragionando con meco, et io co·llui.`,
       author: 'Francesco Petrarca',
+      id: '3909',
     },
     {
       title: 'Il sabato del villaggio',
@@ -126,11 +129,13 @@ const Home = () => {
       Altro dirti non vo'; ma la tua festa
       Ch'anco tardi a venir non ti sia grave.`,
       author: 'Giacomo Leopardi',
+      id: '3749',
     },
   ]);
   return (
     <div className='home'>
       <Bloglist classList='bolgEl' blogs={blogs} title='I componimenti' />
+      <Prova />
     </div>
   );
 };

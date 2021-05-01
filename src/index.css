@@ -57,6 +57,10 @@ button:hover {
   margin: 5vh 0;
 }
 
+.artTitle {
+  margin-bottom: 3vh;
+}
+
 .author {
   margin: 2vh 0;
   text-align: right;
