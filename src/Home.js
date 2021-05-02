@@ -132,10 +132,33 @@ const Home = () => {
       id: '3749',
     },
   ]);
+  const [objprops, setP] = useState([
+    {
+      marca: 'fiat',
+      modello: 'punto',
+      assicurata: 'genialloyd',
+      ruote: 4,
+      id: 2870,
+    },
+    {
+      marca: 'ford',
+      modello: 'fiesta',
+      assicurata: 'Generali',
+      ruote: 4,
+      id: 63789,
+    },
+    {
+      marca: 'ferrari',
+      modello: '458Italia',
+      assicurata: 'genialloyd',
+      ruote: 4,
+      id: 78789,
+    },
+  ]);
   return (
     <div className='home'>
       <Bloglist classList='bolgEl' blogs={blogs} title='I componimenti' />
-      <Prova />
+      <Prova objprops={objprops} />
     </div>
   );
 };

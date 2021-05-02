@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import Try from './Try';
-
-const Prova = () => {
-  let [x, setX] = useState(`Ciao`);
-  const cambiaSaluto = () => {
-    x === `Ciao` ? setX(`Buongiorno`) : setX(`Ciao`);
-  };
+const Prova = (props) => {
+  const objprops = props.objprops;
   return (
     <div>
-      <h2>{x}</h2>
-      <button onClick={cambiaSaluto}>cambia Il saluto</button>
-      <Try />
+      {objprops.map((e) => {
+        return (
+          <div className='blog-preview' key={e.id}>
+            <h1>{e.marca}</h1>
+            <h2>{e.modello}</h2>
+            <p>{e.assicurata}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };

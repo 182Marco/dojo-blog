@@ -4,7 +4,7 @@ const Bloglist = (props) => {
   const blogs = props.blogs;
   const title = props.title;
   return (
-    <div className='blog-list'>
+    <div className='blog-preview'>
       <h2>{title}</h2>
       {blogs.map((blog) => (
         <div className='blog-preview' key={blog.id}>
