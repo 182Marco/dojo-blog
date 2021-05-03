@@ -3,7 +3,11 @@ import Bloglist from './Bloglist';
 import Prova from './Prova';
 
 const Home = () => {
+  const [count, setCount] = useState(0);
   const [blogs, setBlogs] = useState([
+    function up() {
+      setCount(count++);
+    },
     {
       title: 'La mia sera',
       body: `Il giorno fu pieno di lampi;
@@ -157,6 +161,11 @@ const Home = () => {
   ]);
   return (
     <div className='home'>
+      <button onClick={() => (count > 0 ? setCount(count - 1) : null)}>
+        -
+      </button>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>+</button>
       <Bloglist classList='bolgEl' blogs={blogs} title='I componimenti' />
       <Prova objprops={objprops} />
     </div>
