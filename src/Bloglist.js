@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
-const Bloglist = (props) => {
-  const blogs = props.blogs;
-  const title = props.title;
+const Bloglist = ({ blogs, title }) => {
   return (
     <div className='blog-preview'>
       <h2>{title}</h2>

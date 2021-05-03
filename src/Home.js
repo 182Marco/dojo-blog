@@ -3,6 +3,8 @@ import Bloglist from './Bloglist';
 import Prova from './Prova';
 
 const Home = () => {
+  const [autore, setAutore] = useState(['Pascoli', 'Petrarca', 'Leopardi']);
+  const [i, setI] = useState(0);
   const [count, setCount] = useState(0);
   const [blogs, setBlogs] = useState([
     function up() {
@@ -54,7 +56,7 @@ const Home = () => {
         38. che fanno ch’io torni com’era…
         39. sentivo mia madre… poi nulla…
         40. sul far della sera.`,
-      author: 'Giovanni Pascoli',
+      author: 'Pascoli',
       id: '3908',
     },
     {
@@ -76,7 +78,7 @@ const Home = () => {
       Ma pur sì aspre vie né sì selvagge
       cercar non so ch’Amor non venga sempre
       ragionando con meco, et io co·llui.`,
-      author: 'Francesco Petrarca',
+      author: 'Petrarca',
       id: '3909',
     },
     {
@@ -132,7 +134,7 @@ const Home = () => {
       Stagion lieta è cotesta.
       Altro dirti non vo'; ma la tua festa
       Ch'anco tardi a venir non ti sia grave.`,
-      author: 'Giacomo Leopardi',
+      author: 'Leopardi',
       id: '3749',
     },
   ]);
@@ -162,11 +164,23 @@ const Home = () => {
   return (
     <div className='home'>
       <button onClick={() => (count > 0 ? setCount(count - 1) : null)}>
-        -
+        dimunisci
       </button>
       <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count + 1)}>aumenta</button>
       <Bloglist classList='bolgEl' blogs={blogs} title='I componimenti' />
+      <h3>Seleziona un autore: </h3>
+      <button onClick={() => (i < 2 ? setI(i + 1) : setI(0))}>
+        clicca qui per passare all'autore successivo
+      </button>
+      <p>
+        <em> attualmente ricercato:</em> <strong>{autore[i]}</strong>{' '}
+      </p>
+      <Bloglist
+        classList='bolgEl'
+        title={'Da qui solo le poesie che hanno come autore quello selzionaro'}
+        blogs={blogs.filter((e) => e.author == autore[i])}
+      />
       <Prova objprops={objprops} />
     </div>
   );
