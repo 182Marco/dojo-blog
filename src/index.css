@@ -39,8 +39,8 @@ body {
 
 button {
   background-color: transparent;
-  border: 2px solid #198dcc;
-  color: #198dcc;
+  border: 2px solid #ddd;
+  color: #ddd;
   border-radius: 3px;
   padding: 5px 10px;
   margin: 7px 0;
@@ -50,7 +50,8 @@ button {
 
 button:hover {
   color: #fff;
-  background-color: #198dcc;
+  background-color: #f1356d;
+  border: 2px solid #f1356d;
 }
 
 .blog-preview {

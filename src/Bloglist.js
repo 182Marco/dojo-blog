@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Bloglist = ({ blogs, title }) => {
+const Bloglist = ({ blogs, title, handleDelete }) => {
   return (
     <div className='blog-preview'>
       <h2>{title}</h2>
@@ -11,6 +11,9 @@ const Bloglist = ({ blogs, title }) => {
           <p className='author'>
             Scritto da: <br /> <em> {blog.author} </em>
           </p>
+          <button onClick={() => handleDelete(blog.id)}>
+            cancella il componimento
+          </button>
         </div>
       ))}
     </div>
