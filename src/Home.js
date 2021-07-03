@@ -19,8 +19,9 @@ const Home = () => {
         return r.json();
       })
       .then(data => {
-        // I'm setting just to see more clearly that is a
-        // conditional rendering happenin when we test the app
+        // I'm setting a time out just to see more
+        // clearly when we test the app) that a
+        // conditional rendering is happening
         setInterval(() => {
           setBlogs(data);
           setPending(false);
