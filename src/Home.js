@@ -7,6 +7,7 @@ const Home = () => {
   const [i, setI] = useState(0);
   const [count, setCount] = useState(0);
   const [blogs, setBlogs] = useState(null);
+  const [isPending, setPending] = useState(true);
   // CREATED
   // use effect is the same as created in Vue if ypu pass as 2nd value an empty array
   // WHATCHERS
@@ -18,7 +19,17 @@ const Home = () => {
         return r.json();
       })
       .then(data => {
-        setBlogs(data);
+        // I'm setting just to see more clearly that is a
+        // conditional rendering happenin when we test the app
+        setInterval(() => {
+          setBlogs(data);
+          setPending(false);
+        }, 2000);
+        // setInterval(() => , 3000);
+        // setInterval(function () {
+        //   setBlogs(data);
+        //   setPending(false);
+        // }, 3000);
       });
   }, []);
   // METHODS
@@ -36,13 +47,18 @@ const Home = () => {
           setBlogs={setBlogs}
         />
       )}
-      <h3>Seleziona un autore: </h3>
-      <p>
-        <em> attualmente ricercato:</em> <strong>{author[i]}</strong>{' '}
-      </p>
-      <button onClick={() => (i < 2 ? setI(i + 1) : setI(0))}>
-        clicca qui per passare all'autore successivo ->
-      </button>{' '}
+      {isPending && <h2>Loading...</h2>}
+      {!isPending && (
+        <div>
+          <h3>Seleziona un autore: </h3>
+          <p>
+            <em> attualmente ricercato:</em> <strong>{author[i]}</strong>{' '}
+          </p>
+          <button onClick={() => (i < 2 ? setI(i + 1) : setI(0))}>
+            clicca qui per passare all'autore successivo ->
+          </button>
+        </div>
+      )}
       {blogs && (
         <Bloglist
           classList='bolgEl'
