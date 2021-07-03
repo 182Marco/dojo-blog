@@ -1,22 +1,25 @@
-
 .navbar {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    margin: 20px auto;
-    border-bottom: 1px solid $white;
-    h1 {
-      color: $brand;
-    }
-    .links {
-      margin-left: auto;
-    }
-    a {
-      margin-left: 16px;
-      text-decoration: none;
-      padding: 6px;
-      &:hover {
-        color: $brand;
-      }
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  border-bottom: 1px solid $white;
+  h1 {
+    color: $brand;
+  }
+  ul.links {
+    margin-left: auto;
+    list-style: none;
+    li {
+      display: inline-block;
     }
   }
+  a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    &:hover {
+      color: $brand;
+    }
+  }
+}

@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Likes from './Likes';
 
-const Bloglist = ({ blogs, title, handleDelete }) => {
+const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
   return (
     <div className='blog-preview'>
       <h2>{title}</h2>

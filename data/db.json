@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "La mia sera",
+      "body": "Il giorno fu pieno di lampi;\n        2. ma ora verranno le stelle,\n        3. le tacite stelle. Nei campi\n        4. c’è un breve gre gre di ranelle.\n        5. Le tremule foglie dei pioppi\n        6. trascorre una gioia leggiera.\n        7. Nel giorno, che lampi! che scoppi!\n        8. Che pace, la sera!",
+      "author": "Pascoli",
+      "id": "3908"
+    },
+    {
+      "title": "Solo et pensoso ",
+      "body": "Solo et pensoso i più deserti campi\n      vo mesurando a passi tardi et lenti,\n      et gli occhi porto per fuggire intenti\n      ove vestigio human l’arena stampi.",
+      "author": "Petrarca",
+      "id": "3909"
+    },
+    {
+      "title": "Il sabato del villaggio",
+      "body": "La donzelletta vien dalla campagna,\n      In sul calar del sole,\n      Col suo fascio dell'erba; e reca in mano\n      Un mazzolin di rose e di viole,\n      Onde, siccome suole,\n      Ornare ella si appresta\n      Dimani, al dì di festa, il petto e il crine.",
+      "author": "Leopardi",
+      "id": "3749"
+    }
+  ]
+}
