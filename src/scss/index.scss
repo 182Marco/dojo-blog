@@ -1,39 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import 'var';
+
+@import 'vars';
 @import 'reset';
 @import 'navbar';
+@import 'utilities';
+@import 'btns';
+@import 'article';
+@import 'likes';
 
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-}
 
-button {
-  background-color: transparent;
-  border: 2px solid $textCol;
-  color: $textCol;
-  border-radius: 3px;
-  padding: 5px 10px;
-  margin: 7px 0;
-  transition: all 0.3s;
-  font-weight: 700;
-  &:hover {
-    color: #fff;
-    background-color: $importantCol;
-    border: 2px solid $importantCol;
-  }
-}
 
-.blog-preview {
-  margin: 5vh 0;
-}
 
-.artTitle {
-  margin-bottom: 3vh;
-}
-
-.author {
-  margin: 2vh 0;
-  text-align: right;
-}

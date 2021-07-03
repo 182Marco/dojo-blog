@@ -41,7 +41,7 @@ const Home = () => {
       id: '3749',
     },
   ]);
-  const handleDelete = (id) => setBlogs(blogs.filter((e) => e.id !== id));
+  const handleDelete = id => setBlogs(blogs.filter(e => e.id !== id));
 
   return (
     <div className='home'>
@@ -60,14 +60,9 @@ const Home = () => {
       </button>
       <Bloglist
         classList='bolgEl'
-        title={'Da qui solo le poesie che hanno come autore quello selzionato'}
-        blogs={blogs.filter((e) => e.author == autore[i])}
+        title={'Da qui solo le poesie che hanno come autore quello selzionato:'}
+        blogs={blogs.filter(e => e.author == autore[i])}
       />
-      <button onClick={() => (count > 0 ? setCount(count - 1) : null)}>
-        dimunisci
-      </button>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>aumenta</button>
     </div>
   );
 };

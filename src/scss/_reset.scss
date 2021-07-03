@@ -1,9 +1,9 @@
-/* base styles */
+//  reset
 * {
   margin: 0;
   font-family: 'Quicksand';
-  color: $textCol;
+  color: $text;
 }
 body {
-  background-color: $bgCol;
+  background-color: #222;
 }

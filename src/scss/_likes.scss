@@ -1,0 +1,13 @@
+.likes.box {
+    display: inline-block;
+    margin-left: 10px;
+    .count {
+      margin: 0 10px;
+      &.btn {
+        padding: 0 5px;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  

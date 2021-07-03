@@ -1,11 +1,9 @@
-const GogLink = `http://www.google.com`;
-
 const Navbar = () => {
   return (
-    <nav className='navbar'>
+    <nav className='navbar content'>
       <h1>Il blog della grande poesia</h1>
       <div className='links'>
-        <a href={GogLink}>Home google</a>
+        <a href=''>Home</a>
         <a href=''>New Blog</a>
       </div>
     </nav>
