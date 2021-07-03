@@ -25,11 +25,6 @@ const Home = () => {
           setBlogs(data);
           setPending(false);
         }, 2000);
-        // setInterval(() => , 3000);
-        // setInterval(function () {
-        //   setBlogs(data);
-        //   setPending(false);
-        // }, 3000);
       });
   }, []);
   // METHODS
