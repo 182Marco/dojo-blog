@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Bloglist from './Bloglist';
+import ChooseAuthor from './ChooseAuthor';
 
 const Home = () => {
   // VARS
@@ -20,7 +21,7 @@ const Home = () => {
       })
       .then(data => {
         // I'm setting a time out just to see more
-        // clearly when we test the app) that a
+        // clearly (when we test the app) that a
         // conditional rendering is happening
         setInterval(() => {
           setBlogs(data);
@@ -44,17 +45,7 @@ const Home = () => {
         />
       )}
       {isPending && <h2>Loading...</h2>}
-      {!isPending && (
-        <div>
-          <h3>Seleziona un autore: </h3>
-          <p>
-            <em> attualmente ricercato:</em> <strong>{author[i]}</strong>{' '}
-          </p>
-          <button onClick={() => (i < 2 ? setI(i + 1) : setI(0))}>
-            clicca qui per passare all'autore successivo ->
-          </button>
-        </div>
-      )}
+      {!isPending && <ChooseAuthor author={author} i={i} setI={setI} />}
       {blogs && (
         <Bloglist
           classList='bolgEl'
