@@ -60,8 +60,9 @@ const Home = () => {
       </button>
       <Bloglist
         classList='bolgEl'
-        title={'Da qui solo le poesie che hanno come autore quello selzionato:'}
+        title={`Le poesie di ${autore[i]}`}
         blogs={blogs.filter(e => e.author == autore[i])}
+        handleDelete={handleDelete}
       />
     </div>
   );
