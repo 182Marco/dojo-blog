@@ -12,9 +12,9 @@ const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
           <p className='author'>
             Scritto da: <br /> <em> {blog.author} </em>
           </p>
-          <p>
+          <div>
             likes: <Likes></Likes>
-          </p>
+          </div>
           <button onClick={() => handleDelete(blog.id)}>
             cancella il componimento
           </button>
