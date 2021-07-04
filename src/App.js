@@ -1,16 +1,31 @@
 import './navbar';
 import Navbar from './navbar';
 import Home from './Home';
+import Create from './Create';
+// import to use router
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
-  const link = `http://www.google.com`;
   return (
-    <div className='App'>
-      <Navbar homeLink={link} />
-      <div className='content'>
-        <Home />
+    // to make router accessibile from all components
+    // you have wrap all with a Router Component
+    <Router>
+      <div className='App'>
+        <Navbar />
+        <div className='content'>
+          {/* switch is a component that makes sure 
+          that any one route shows at any one time */}
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route path='/Create-New-Blog'>
+              <Create />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

@@ -45,3 +45,6 @@ const Home = () => {
   );
 };
 export default Home;
+
+// TO CREATE A LOCAL SERVER THAT RETURNS data/db -> npx json-server --watch data/db.json --port 8000
+// TO INSTALL ROUTER -> npm install react-router-dom@5

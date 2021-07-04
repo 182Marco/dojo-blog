@@ -1,14 +1,15 @@
-const Navbar = ({ homeLink }) => {
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
   return (
     <nav className='navbar content'>
       <h1>Il blog della grande poesia</h1>
       <ul className='links'>
         <li>
-          <a href={homeLink}>Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          {' '}
-          <a href=''>New Blog</a>
+          <Link to='/Create-New-Blog'>Create</Link>
         </li>
       </ul>
     </nav>
