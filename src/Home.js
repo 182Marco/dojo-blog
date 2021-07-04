@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Bloglist from './Bloglist';
 import ChooseAuthor from './ChooseAuthor';
+import Loading from './Loading';
 
 const Home = () => {
   // VARS
@@ -23,7 +24,7 @@ const Home = () => {
         // I'm setting a time out just to see more
         // clearly (when we test the app) that a
         // conditional rendering is happening
-        setInterval(() => {
+        setTimeout(() => {
           setBlogs(data);
           setPending(false);
         }, 2000);
@@ -44,7 +45,7 @@ const Home = () => {
           setBlogs={setBlogs}
         />
       )}
-      {isPending && <h2>Loading...</h2>}
+      {isPending && <Loading />}
       {!isPending && <ChooseAuthor author={author} i={i} setI={setI} />}
       {blogs && (
         <Bloglist

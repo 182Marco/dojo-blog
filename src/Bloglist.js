@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react';
 import Likes from './Likes';
 
 const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
   return (
     <div className='blog-preview'>
       <h2>{title}</h2>
-      {blogs.map((blog, i) => (
-        <div className='blog-preview' key={i}>
+      {blogs.map(blog => (
+        <div className='blog-preview' key={blog.id}>
           <h3 className='artTitle'>{blog.title}</h3>
           {/* map inside map to break all lines of each
           poetry inside a single p line */}
