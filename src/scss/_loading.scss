@@ -5,6 +5,7 @@
   position: relative;
   @include flex(column, center, center);
   margin-top: 200px;
+  margin-bottom: 50px;
 }
 .writes-box {
   // creare un bordo intorno al testo
