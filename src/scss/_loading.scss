@@ -1,0 +1,92 @@
+@import 'mixins';
+@import 'vars';
+
+.comp-Cont {
+  position: relative;
+  @include flex(column, center, center);
+  margin-top: 200px;
+}
+.writes-box {
+  // creare un bordo intorno al testo
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  // ****************
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translate(-50% -50%);
+}
+//   percentuale caricamento sopra la barra stessa
+.precentage {
+  transform: translateX(-50%);
+  margin: 0;
+}
+.loadingWrap {
+  @include width-height(40vw, 1vw);
+  width: 40vw;
+  height: 50px;
+  border: 10px solid $bg;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.increase.bar {
+  height: 100%;
+  background-color: $brand;
+}
+.increase {
+  animation: increase 3s linear;
+}
+@keyframes increase {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+//   parte dei testi
+.load {
+  transform: translateX(-50%);
+  @include flex(row, center, center);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  span {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    display: inline-block;
+    @include width-height(33px, 7px);
+    background-color: $bg-noApha;
+    animation: cover-dot 1.6s linear infinite;
+  }
+}
+//   effetto progressione dei puntini
+@keyframes cover-dot {
+  0% {
+    right: 0;
+  }
+  32% {
+    right: 0;
+  }
+  33% {
+    right: -10px;
+  }
+  43% {
+    right: -10px;
+  }
+  60% {
+    right: -10px;
+  }
+  61% {
+    right: -24px;
+  }
+  80% {
+    right: -24px;
+  }
+  81% {
+    right: -43px;
+  }
+  100% {
+    right: -43px;
+  }
+}

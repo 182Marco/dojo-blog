@@ -8,20 +8,18 @@ const Loading = () => {
   useEffect(() => {
     int = setInterval(() => {
       increasePerc();
-      log();
-    }, 20);
+    }, 30);
     increasePerc();
   }, []);
   // methods
   const increasePerc = () =>
     percent < 100 ? setPercent(percent++) : clearInterval(int);
-  const log = () => console.log(percent);
   //   template
   return (
     <div className='comp-Cont'>
       <div className='writes-box'>
-        <p className='precentage'>{percent}%</p>
-        <p>
+        <p className='precentage load'>{percent}%</p>
+        <p className='load'>
           Loading . . .
           {/* span che si sposta comprendo progressivamente i puntini per effetto progressione */}
           <span></span>

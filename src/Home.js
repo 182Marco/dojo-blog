@@ -27,7 +27,7 @@ const Home = () => {
         setTimeout(() => {
           setBlogs(data);
           setPending(false);
-        }, 2000);
+        }, 3000);
       });
   }, []);
   // METHODS
