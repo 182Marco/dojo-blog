@@ -5,7 +5,7 @@ const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
     <div className='blog-preview'>
       <h2>{title}</h2>
       {blogs.map(blog => (
-        <div className='blog-preview' key={blog.id}>
+        <div className='blog-preview' key={`__${blog.id}`}>
           <h3 className='artTitle'>{blog.title}</h3>
           {/* map inside map to break all lines of each
           poetry inside a single p line */}

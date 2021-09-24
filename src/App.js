@@ -1,7 +1,7 @@
-import './navbar';
-import Navbar from './navbar';
-import Home from './Home';
-import Create from './Create';
+import './components/Navbar';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Create from './components/Create';
 // import to use router
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 

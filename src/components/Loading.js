@@ -21,13 +21,13 @@ const Loading = () => {
         <p className='precentage load'>{percent}%</p>
         <p className='load'>
           Loading . . .
-          {/* span che si sposta comprendo progressivamente i puntini per effetto progressione */}
+          {/* span which moves progressively covering the dots as a result of progression */}
           <span></span>
         </p>
       </div>
-      {/* barra caricamento */}
+      {/* loading bar*/}
       <div className='loadingWrap'>
-        {/* scritta percentuale di caricamento sopra barra */}
+        {/* written loading percentage above the bar */}
         <div className='increase bar'></div>
       </div>
     </div>

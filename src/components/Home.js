@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Bloglist from './Bloglist';
 import ChooseAuthor from './ChooseAuthor';
 import Loading from './Loading';
-import useFetch from './UseFetch';
+import useFetch from '../costomHooks/UseFetch';
 
 const Home = () => {
   // VARS
@@ -16,7 +16,7 @@ const Home = () => {
   );
   // METHODS
   const handleDelete = id => setData(blogs.filter(e => e.id !== id));
-  const filterAuthor = blogs ? blogs.filter(e => e.author == author[i]) : [];
+  const filterAuthor = blogs ? blogs.filter(e => e.author === author[i]) : [];
   // TEMPLATE
   return (
     <div className='home'>
