@@ -1,4 +1,5 @@
 import Likes from './Likes';
+import { Link } from 'react-router-dom';
 
 const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
   return (
@@ -19,7 +20,12 @@ const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
           <div>
             likes: <Likes></Likes>
           </div>
-          <button onClick={() => handleDelete(blog.id)}>
+          <Link to={`/details-of-blog-number/${blog.id}`}>
+            <button className='BtnLink'>
+              leggi il componimento per intero
+            </button>
+          </Link>
+          <button className='BtnLink' onClick={() => handleDelete(blog.id)}>
             cancella il componimento
           </button>
         </div>

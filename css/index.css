@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  font-family: 'Quicksand';
+  color: #ddd;
+}
+
+body {
+  background-color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h1 {
+  color: #f1356d;
+}
+
+.navbar ul.links {
+  margin-left: auto;
+  list-style: none;
+}
+
+.navbar ul.links li {
+  display: inline-block;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar a:hover {
+  color: #f1356d;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #ddd;
+  color: #ddd;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 7px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.BtnLink {
+  display: block;
+  margin: 12px 0;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #f1356d;
+  border: 2px solid #f1356d;
+}
+
+.blog-preview {
+  margin: 70px 0;
+  background-color: rgba(255, 255, 255, 0.041);
+  padding: 40px;
+}
+
+.blog-preview .artTitle {
+  margin-bottom: 3vh;
+}
+
+.blog-preview .author {
+  margin: 6px 0;
+  text-align: right;
+}
+
+.likes.box {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.likes.box .count {
+  margin: 0 10px;
+}
+
+.likes.box .count.btn {
+  padding: 0 5px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.comp-Cont {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.writes-box {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  -webkit-transform: translate(-50% -50%);
+          transform: translate(-50% -50%);
+}
+
+.precentage {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+}
+
+.loadingWrap {
+  width: 40vw;
+  height: 1vw;
+  width: 40vw;
+  height: 50px;
+  border: 10px solid rgba(255, 255, 255, 0.041);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.increase.bar {
+  height: 100%;
+  background-color: #f1356d;
+}
+
+.increase {
+  -webkit-animation: increase 3s linear;
+          animation: increase 3s linear;
+}
+
+@-webkit-keyframes increase {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes increase {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.load {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.load span {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  display: inline-block;
+  width: 33px;
+  height: 7px;
+  background-color: #222223;
+  -webkit-animation: cover-dot 1.6s linear infinite;
+          animation: cover-dot 1.6s linear infinite;
+}
+
+@-webkit-keyframes cover-dot {
+  0% {
+    right: 0;
+  }
+  32% {
+    right: 0;
+  }
+  33% {
+    right: -10px;
+  }
+  43% {
+    right: -10px;
+  }
+  60% {
+    right: -10px;
+  }
+  61% {
+    right: -24px;
+  }
+  80% {
+    right: -24px;
+  }
+  81% {
+    right: -43px;
+  }
+  100% {
+    right: -43px;
+  }
+}
+
+@keyframes cover-dot {
+  0% {
+    right: 0;
+  }
+  32% {
+    right: 0;
+  }
+  33% {
+    right: -10px;
+  }
+  43% {
+    right: -10px;
+  }
+  60% {
+    right: -10px;
+  }
+  61% {
+    right: -24px;
+  }
+  80% {
+    right: -24px;
+  }
+  81% {
+    right: -43px;
+  }
+  100% {
+    right: -43px;
+  }
+}
+
+.error {
+  color: red;
+}
+/*# sourceMappingURL=index.css.map */
