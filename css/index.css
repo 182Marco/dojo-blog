@@ -71,12 +71,30 @@ a {
   height: 60vh;
 }
 
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #ddd;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 90%;
+}
+
 h2 {
   font-size: 1.8rem;
 }
 
 p {
-  line-height: 1.4rem;
+  line-height: 1.7rem;
 }
 
 button {
