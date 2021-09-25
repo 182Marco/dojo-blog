@@ -12,11 +12,11 @@ const Create = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setPending(true);
-    const poem = { title, body, author };
+    const addPoem = { title, body, author };
     fetch('http://localhost:8000/blogs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(poem),
+      body: JSON.stringify(addPoem),
     }).then(() => {
       // promise is this case is useless for real life
       // -> just to show the loading message on botton
@@ -29,7 +29,6 @@ const Create = () => {
         .then(() => setPending(false))
         .then(history.push('/'));
     });
-    console.log(poem);
   };
   // TEMPLATE
   return (

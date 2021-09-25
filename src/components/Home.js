@@ -6,15 +6,12 @@ import useFetch from '../costomHooks/UseFetch';
 
 const Home = () => {
   // VARS
-  const [i, setI] = useState(0);
-  const [data, setData] = useState(null);
+
   const [chosenAut, setChosenAut] = useState('');
   // comming from costum hook
   const { data: blogs, isPending, error } = useFetch(
     'http://localhost:8000/blogs'
   );
-  // METHODS
-  // const handleDelete = id => setData(blogs.filter(e => e.id !== id));
   // TEMPLATE
   return (
     <div className='home'>
@@ -24,13 +21,7 @@ const Home = () => {
         <ChooseAuthor setChosenAut={setChosenAut} chosenAut={chosenAut} />
       )}
       {blogs && (
-        <Bloglist
-          classList='bolgEl'
-          blogs={blogs}
-          title='I componimenti'
-          // handleDelete={handleDelete}
-          setData={setData}
-        />
+        <Bloglist classList='bolgEl' blogs={blogs} title='I componimenti' />
       )}
     </div>
   );
@@ -38,4 +29,3 @@ const Home = () => {
 export default Home;
 
 // TO CREATE A LOCAL SERVER THAT RETURNS data/db -> npx json-server --watch data/db.json --port 8000
-// TO INSTALL ROUTER -> npm install react-router-dom@5

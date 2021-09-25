@@ -1,6 +1,14 @@
 import Likes from './Likes';
+import { useHistory } from 'react-router-dom';
 
 const SingleBlog = ({ blog }) => {
+  // VARIABILES
+  const history = useHistory();
+  // FUNCTIONS:
+  const handleDelete = blogId =>
+    fetch(`http://localhost:8000/blogs/${blogId}`, {
+      method: 'DELETE',
+    }).then(() => history.push('/'));
   //   template
   return (
     <article className='blog-preview'>
@@ -17,6 +25,9 @@ const SingleBlog = ({ blog }) => {
       <div>
         likes: <Likes></Likes>
       </div>
+      <button className='BtnLink' onClick={() => handleDelete(blog.id)}>
+        cancella il componimento
+      </button>
     </article>
   );
 };

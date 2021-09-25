@@ -1,9 +1,10 @@
 import Likes from './Likes';
 import { Link } from 'react-router-dom';
 
-const Bloglist = ({ blogs, title, setBlogs }) => {
+const Bloglist = ({ blogs, title }) => {
+  // const [reactiveBlogs, setReactiveBlogs] = useState([...blogs]);
   // FUNCTIONS
-  const shortenBlogs = blogs.map(obj => {
+  let shortenBlogs = blogs.map(obj => {
     const maxLength = 100;
     // first cut without even if we're in the middle of a word
     const cut = obj.body.substr(0, maxLength);
@@ -16,6 +17,8 @@ const Bloglist = ({ blogs, title, setBlogs }) => {
       body: shortBody,
     };
   });
+  //
+
   // TEMPLATE
   return (
     <div className='blog-preview'>
@@ -29,7 +32,6 @@ const Bloglist = ({ blogs, title, setBlogs }) => {
             {blog.body.split('\n').map((line, i) => {
               return <p key={i}>{line}</p>;
             })}
-            {/* ---- */}
             <p className='author'>
               Scritto da: <br /> <em> {blog.author} </em>
             </p>
@@ -37,11 +39,8 @@ const Bloglist = ({ blogs, title, setBlogs }) => {
               likes: <Likes></Likes>
             </div>
             <Link to={`/details-of-blog-number/${blog.id}`}>
-              <button className='BtnLink'>
-                leggi il componimento per intero
-              </button>
+              <button className='BtnLink'>vai al componenimento</button>
             </Link>
-            <button className='BtnLink'>cancella il componimento</button>
           </article>
         ))}
     </div>

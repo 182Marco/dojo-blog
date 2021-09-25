@@ -53,7 +53,7 @@
   font-weight: 700;
   span {
     position: absolute;
-    bottom: 5px;
+    bottom: 0;
     right: 0;
     display: inline-block;
     @include width-height(33px, 7px);

@@ -32,5 +32,5 @@ function App() {
     </Router>
   );
 }
-
+// TO CREATE A LOCAL SERVER THAT RETURNS data/db -> npx json-server --watch data/db.json --port 8000
 export default App;
