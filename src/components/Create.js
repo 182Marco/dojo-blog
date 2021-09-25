@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Create = () => {
   // VARIABILES
@@ -6,6 +7,7 @@ const Create = () => {
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('');
   const [pending, setPending] = useState(false);
+  const history = useHistory();
   // FUNCTIONS
   const handleSubmit = e => {
     e.preventDefault();
@@ -23,7 +25,9 @@ const Create = () => {
           setInterval(() => resolve(), 2000)
         );
       };
-      promise().then(() => setPending(false));
+      promise()
+        .then(() => setPending(false))
+        .then(history.push('/'));
     });
     console.log(poem);
   };
@@ -57,8 +61,10 @@ const Create = () => {
           id='author'
           required
         />
-        {!pending && <button> aggiungi poesia</button>}
-        {pending && <button disabled> aggiungendo poesia... </button>}
+        {!pending && (
+          <button> aggiungi poesia e vedila subito nella home</button>
+        )}
+        {pending && <button disabled> carico poesia... </button>}
       </form>
     </div>
   );
