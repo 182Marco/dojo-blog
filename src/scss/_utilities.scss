@@ -1,5 +1,13 @@
+@import 'mixins';
+
 .content {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-  }
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cont-to-center {
+  // flex mixin to center
+  @include flex(column);
+  height: 60vh;
+}
