@@ -1,7 +1,7 @@
 import Likes from './Likes';
 import { Link } from 'react-router-dom';
 
-const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
+const Bloglist = ({ blogs, title, setBlogs }) => {
   // FUNCTIONS
   const shortenBlogs = blogs.map(obj => {
     const maxLength = 100;
@@ -41,9 +41,7 @@ const Bloglist = ({ blogs, title, handleDelete, setBlogs }) => {
                 leggi il componimento per intero
               </button>
             </Link>
-            <button className='BtnLink' onClick={() => handleDelete(blog.id)}>
-              cancella il componimento
-            </button>
+            <button className='BtnLink'>cancella il componimento</button>
           </article>
         ))}
     </div>

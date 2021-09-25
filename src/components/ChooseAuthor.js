@@ -1,13 +1,15 @@
-const ChooseAuthor = ({ author, i, setI }) => {
+const ChooseAuthor = ({ chosenAut, setChosenAut }) => {
   return (
     <div>
-      <h3>Seleziona un autore: </h3>
+      <h3>Cerca autore: </h3>
       <p>
-        <em> attualmente ricercato:</em> <strong>{author[i]}</strong>{' '}
+        <em> attualmente ricercato:</em> <strong>{chosenAut}</strong>
       </p>
-      <button onClick={() => (i < 2 ? setI(i + 1) : setI(0))}>
-        clicca qui per passare all'autore successivo
-      </button>
+      <input
+        placeholder='tutti gli autori'
+        type='text'
+        onChange={e => setChosenAut(e.target.value.toLocaleLowerCase())}
+      />
     </div>
   );
 };

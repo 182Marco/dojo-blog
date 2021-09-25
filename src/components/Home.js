@@ -6,43 +6,32 @@ import useFetch from '../costomHooks/UseFetch';
 
 const Home = () => {
   // VARS
-  const [author, setAuthor] = useState(['Pascoli', 'Petrarca', 'Leopardi']);
   const [i, setI] = useState(0);
-  const [count, setCount] = useState(0);
   const [data, setData] = useState(null);
+  const [chosenAut, setChosenAut] = useState('');
   // comming from costum hook
   const { data: blogs, isPending, error } = useFetch(
     'http://localhost:8000/blogs'
   );
   // METHODS
-  const handleDelete = id => setData(blogs.filter(e => e.id !== id));
-  const filterAuthor = blogs ? blogs.filter(e => e.author === author[i]) : [];
-  useEffect(() => console.log(filterAuthor));
-
+  // const handleDelete = id => setData(blogs.filter(e => e.id !== id));
   // TEMPLATE
   return (
     <div className='home'>
+      {isPending && <Loading />}
+      {error && <div className='error'>{error}</div>}
+      {!isPending && (
+        <ChooseAuthor setChosenAut={setChosenAut} chosenAut={chosenAut} />
+      )}
       {blogs && (
         <Bloglist
           classList='bolgEl'
           blogs={blogs}
           title='I componimenti'
-          handleDelete={handleDelete}
+          // handleDelete={handleDelete}
           setData={setData}
         />
       )}
-      {isPending && <Loading />}
-      {!isPending && <ChooseAuthor author={author} i={i} setI={setI} />}
-      {blogs && (
-        <Bloglist
-          classList='bolgEl'
-          title={`Le poesie di ${author[i]}`}
-          blogs={filterAuthor}
-          handleDelete={handleDelete}
-          setData={setData}
-        />
-      )}
-      {error && <div className='error'>{error}</div>}
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import useFetch from '../customHooks/UseFetch';
 import Loading from './Loading';
-import Likes from './Likes';
 import SingleBlog from './SingleBlog';
 
 const BlogDetail = () => {

@@ -1,0 +1,25 @@
+.add-poetry-cont {
+  h2 {
+    margin-top: 20px;
+  }
+  label,
+  button {
+    display: block;
+    margin-top: 40px;
+    font-size: 1.3rem;
+  }
+  input,
+  textarea {
+    padding: 4px 10px;
+    width: calc(100% - 20px);
+    margin-top: 4px;
+    font-size: 1.1rem;
+  }
+  textarea {
+    height: 180px;
+  }
+  button {
+    margin-top: 60px;
+    width: 100%;
+  }
+}
