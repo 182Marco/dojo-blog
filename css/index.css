@@ -39,8 +39,8 @@ a {
 }
 
 .navbar a {
+  font-weight: 700;
   margin-left: 16px;
-  text-decoration: none;
   padding: 6px;
 }
 
@@ -52,6 +52,14 @@ a {
   max-width: 800px;
   margin: auto;
   padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.4rem;
 }
 
 button {
@@ -85,6 +93,7 @@ button:hover {
 }
 
 .blog-preview .artTitle {
+  font-size: 1.7rem;
   margin-bottom: 3vh;
 }
 

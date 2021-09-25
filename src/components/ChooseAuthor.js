@@ -6,7 +6,7 @@ const ChooseAuthor = ({ author, i, setI }) => {
         <em> attualmente ricercato:</em> <strong>{author[i]}</strong>{' '}
       </p>
       <button onClick={() => (i < 2 ? setI(i + 1) : setI(0))}>
-        clicca qui per passare all'autore successivo ->
+        clicca qui per passare all'autore successivo
       </button>
     </div>
   );

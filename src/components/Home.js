@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Bloglist from './Bloglist';
 import ChooseAuthor from './ChooseAuthor';
 import Loading from './Loading';
@@ -17,6 +17,8 @@ const Home = () => {
   // METHODS
   const handleDelete = id => setData(blogs.filter(e => e.id !== id));
   const filterAuthor = blogs ? blogs.filter(e => e.author === author[i]) : [];
+  useEffect(() => console.log(filterAuthor));
+
   // TEMPLATE
   return (
     <div className='home'>
