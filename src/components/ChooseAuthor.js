@@ -8,6 +8,7 @@ const ChooseAuthor = ({ chosenAut, setChosenAut }) => {
       <input
         placeholder='tutti gli autori'
         type='text'
+        value={chosenAut}
         onChange={e => setChosenAut(e.target.value.toLocaleLowerCase())}
       />
     </div>
